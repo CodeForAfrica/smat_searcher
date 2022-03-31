@@ -1,0 +1,13 @@
+tasks:
+  # get raw data from SMAT
+  - source: scripts/get.py
+    product:
+      nb: notebooks/get.ipynb
+      # data: products/raw.csv
+
+  # clean raw data
+  - source: scripts/clean.py
+    product:
+      nb: notebooks/clean.ipynb
+      # clean data
+      data: products/clean.csv
