@@ -1,16 +1,16 @@
 tasks:
 # Load parametere to SMAT
-- source: scripts/load-.ipynb
+- source: tasks/load-.ipynb
   product:
     params: output/load--params.pkl
     url: output/load--url.pkl
     nb: output/load-.ipynb
 # get raw data from SMAT
-- source: scripts/search.ipynb
+- source: tasks/search.ipynb
   product:
     nb: output/search.ipynb
 # Tranformdata from SMAT into table
-- source: scripts/collate.ipynb
+- source: tasks/collate.ipynb
   product:
     nb: output/collate.ipynb
     data: data/search_data.csv
