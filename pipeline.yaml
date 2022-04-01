@@ -1,13 +1,16 @@
 tasks:
-  # get raw data from SMAT
-  - source: scripts/get.py
-    product:
-      nb: notebooks/get.ipynb
-      # data: products/raw.csv
-
-  # clean raw data
-  - source: scripts/clean.py
-    product:
-      nb: notebooks/clean.ipynb
-      # clean data
-      data: products/clean.csv
+# Load parametere to SMAT
+- source: scripts/load-.ipynb
+  product:
+    params: output/load--params.pkl
+    url: output/load--url.pkl
+    nb: output/load-.ipynb
+# get raw data from SMAT
+- source: scripts/search.ipynb
+  product:
+    nb: output/search.ipynb
+# Tranformdata from SMAT into table
+- source: scripts/collate.ipynb
+  product:
+    nb: output/collate.ipynb
+    data: data/search_data.csv
