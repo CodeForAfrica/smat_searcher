@@ -134,3 +134,5 @@ vignettes/*.pdf
 
 # pkgdown site
 docs/
+
+output
